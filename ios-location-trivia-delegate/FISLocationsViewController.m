@@ -8,6 +8,7 @@
 
 #import "FISLocationsViewController.h"
 #import "FISLocation.h"
+#import "FISAddLocationViewController.h"
 
 @interface FISLocationsViewController ()
 
@@ -55,9 +56,43 @@
 
 #pragma mark - Navigation
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    FISAddLocationViewController *destVC = segue.destinationViewController;
+    
+    destVC.delegate = self;
+    
+    
     
 }
+
+- (void)addLocationViewControllerDidCancel:(FISAddLocationViewController *)viewController {
+    
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    NSLog(@"add LocationViewControllerDidCancel");
+    }
+
+- (BOOL)addLocationViewController:(FISAddLocationViewController *)viewController shouldAllowLocationNamed:(NSString *)locationName {
+    for (FISLocation *location in self.triviaLocations) {
+        if([location.name isEqualToString:locationName]){
+            NSLog(@"What is this: %@ and this %@", location.name, locationName);
+            return NO;
+        }
+    }
+    NSLog(@"No Duplicates");
+    return YES;
+}
+
+-(void)addLocationViewController:(FISAddLocationViewController *)viewController didAddLocationNamed:(NSString *)locationName {
+    
+    FISLocation *newLocationObject = [[FISLocation alloc] initWithName:locationName trivia:nil];
+    [self.triviaLocations addObject:newLocationObject];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.tableView reloadData];
+}
+
+
+
+
 
 @end

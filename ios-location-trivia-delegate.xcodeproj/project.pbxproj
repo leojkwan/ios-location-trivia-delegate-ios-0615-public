@@ -39,6 +39,7 @@
 		70A2C20BDADADF6FA472FAE5 /* ios-location-trivia-delegate-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ios-location-trivia-delegate-Info.plist"; sourceTree = "<group>"; };
 		7BE6B9F5B6984AED57062FA3 /* Pods-unit_tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.release.xcconfig"; sourceTree = "<group>"; };
 		874939C97F7C52405BA15493 /* libPods-unit_tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9498F78E1B3C52B2004370BA /* FISAddLocationViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISAddLocationViewControllerDelegate.h; sourceTree = "<group>"; };
 		AA2647B5AD883F2743980923 /* Pods-unit_tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B9C6B610F260CEFC91323C77 /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		BDCEE86A1B39C5C000207246 /* FISLocationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISLocationsViewController.h; sourceTree = "<group>"; };
@@ -108,6 +109,7 @@
 				BDCEE8711B39C5DE00207246 /* FISLocation.m */,
 				BDCEE86A1B39C5C000207246 /* FISLocationsViewController.h */,
 				BDCEE86B1B39C5C000207246 /* FISLocationsViewController.m */,
+				9498F78E1B3C52B2004370BA /* FISAddLocationViewControllerDelegate.h */,
 				BDCEE86D1B39C5CB00207246 /* FISAddLocationViewController.h */,
 				BDCEE86E1B39C5CB00207246 /* FISAddLocationViewController.m */,
 				018317FA93A97E7012ABEBB6 /* Resources */,

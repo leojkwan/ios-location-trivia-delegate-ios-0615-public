@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FISAddLocationViewControllerDelegate.h"
 
-@interface FISLocationsViewController : UITableViewController
+@interface FISLocationsViewController : UITableViewController <FISAddLocationViewControllerDelegate>
 
 @end

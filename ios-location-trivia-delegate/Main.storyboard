@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E26a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="YqP-Mw-M1J">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D2134" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="YqP-Mw-M1J">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -21,7 +21,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9E2-BW-doC">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oey-mq-jMZ">
@@ -42,7 +42,7 @@
                     <navigationItem key="navigationItem" title="Locations" id="gIf-IP-liv">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="UhH-oj-Nwi">
                             <connections>
-                                <segue destination="eFU-jz-aJ7" kind="modal" id="Be7-Qa-18I"/>
+                                <segue destination="eFU-jz-aJ7" kind="modal" identifier="addLocation" id="Be7-Qa-18I"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -84,12 +84,16 @@
                                 <rect key="frame" x="16" y="83" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="editingChanged:" destination="eFU-jz-aJ7" eventType="editingChanged" id="9X5-et-Ui0"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="nameField" destination="fg4-su-5Ja" id="KzX-fv-JRL"/>
+                        <outlet property="saveButton" destination="pC6-mY-8mB" id="n0c-P7-xqj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNJ-0G-UKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
